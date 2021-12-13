@@ -1,0 +1,94 @@
+<%- include ("partials/header.ejs") %>
+
+<div class="row">
+  <div class="col-md-8">
+      <h2><%= post.title %></h2>
+      <q><%= post.shortDesc %></q>
+      <pre><%= post.content %></pre>
+  </div>
+
+  <div class="col-md-4">
+    <div class="this-post-side-section">
+      <h3><%=post.likes%> Loved this recipe !</h3>
+    </div>
+   <div class="post-img" style="background-image: url(/uploads/<%= post.imageFileName %>);" >
+   <!------ EMPTY BODY THIS IS AN IMAGE --------------->
+   </div>
+   <div class="this-post-side-section">
+     <h3>Did you enjoy it ?</h3>
+     <form class="like-form" action="/likePost" method="post">
+       <input class="post-id" type="hidden" name="postId" value="<%= post._id %>">
+       <i class="fas fa-heart like-button"></i>
+     </form>
+     <h3>Give it a like !</h3>
+   </div>
+   <div class="this-post-side-section">
+     <h3>Add a comment</h3>
+     <br>
+     <form class="" action="/posts/addcomment" method="post">
+       <input type="hidden" name="postId" value="<%= post._id %>">
+       <input class="form-control" type="text" name="author" placeholder="Your name...">
+       <br>
+       <textarea class="form-control" name="commentBody" rows="5" cols="80" placeholder="Write your comment here..."></textarea>
+       <br>
+       <button class="btn btn-lg btn-primary" type="submit" name="button">Add Comment</button>
+     </form>
+   </div>
+  </div>
+</div>
+
+<!---- COMMENTS HERE ------------>
+ <hr>
+<h2 class="text-center">Comments</h2>
+ <div class="row">
+
+
+ <% post.comments.forEach(function(element){ %>
+   <div class="comment col-md-6 mb-3">
+     <div class="row">
+       <div class="col-md-2 avatar">
+         <i class="fas fa-user"></i>
+       </div>
+       <div class="col-md-10">
+         <div class="author-name">
+           <h4><%= element.author %></h4>
+         </div>
+         <div class="comment-body">
+           <p><%= element.commentBody %></p>
+           <p class="comment-date"><%= element.date %></p>
+         </div>
+       </div>
+     </div>
+   </div>
+  <% }) %>
+
+
+   <!---- ------------->
+
+
+ </div>
+
+
+
+
+
+<script type="text/javascript">
+  let postId = document.querySelector(".post-id").value;
+  let likeButton = document.querySelector(".fa-heart");
+
+ if(localStorage.getItem(postId)){
+   likeButton.classList.add("liked");
+ }
+
+
+  likeButton.addEventListener("click", function(){
+    if(localStorage.getItem(postId)){
+       console.log(localStorage.getItem(postId));
+    }else if(!localStorage.getItem(postId)){
+      localStorage.setItem(postId, "true");
+      document.querySelector(".like-form").submit();
+    }
+  })
+</script>
+
+<%- include ("partials/footer.ejs") %>

@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 8%;
+  background-color: #fafafa;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+hr {
+  border-top: 15px dotted #0d6efd;;
+  background-color: transparent;
+  opacity: 0.75;
+  width: 25%;
+  margin: 2.5rem auto;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+pre {
+   font-family: 'Jost', sans-serif;
+   font-size: 1.2rem;
+   white-space: pre-line;
+   margin-top: 35px;
+}
+
+
+header {
+  background-image: url("/styles/img/header-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+nav {
+  background-color: #212529;
+  font-family: 'Patrick Hand', cursive;
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+p.write {
+  font-size: 1.6rem;
+}
+
+.page-body {
+  font-family: 'Jost', sans-serif;
+  background-color: #F7F6F2;
+  padding: 3% 3%;
+}
+
+#bootstrap-override .nav-link {
+  color: white;
+}
+
+#bootstrap-override .nav-link:hover {
+  color: #0d6efd;
+  opacity: 0.75;
+}
+
+.nav-link {
+  font-size: 2rem;
+  margin: 0 2.5rem;
+
+}
+
+
+.nav-link i {
+  color: #0d6efd;
+  opacity: 0.75;
+}
+
+.heading{
+  padding: 3.5% 5%;
+  color: black;
+  font-family: 'Patrick Hand', cursive;
+  text-align: left;
+
+}
+
+h1 i {
+ color: #212529;
+}
+
+.heading h1{
+  font-size: 6rem;
+  display: inline-block;
+  background-color: white;
+  border-radius: 60px;
+  padding: 10px;
+  overflow: hidden;
+}
+.heading span{
+  color: #a71212;
+}
+
+.social-buttons{
+  padding: 3.5% 5%;
+  text-align: right;
+}
+
+.social-buttons i{
+  font-size: 6rem;
+  color: #F7F6F2;
+  margin: 7px;
+}
+
+.social-buttons i:hover {
+  color: #212529;
+}
+
+.recipes{
+  margin-bottom: 15px;
+}
+
+.black-box h3 {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 4px;
+  font-weight: 600;
+  max-width: 45%;
+  word-wrap: break-word;
+}
+
+.black-box h3.recipe-form{
+  max-width: 100%;
+}
+
+.black-box p.recipe-form{
+  max-width: 70%;
+}
+
+.black-box p {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 4px;
+  font-weight: 600;
+  max-width: 50%;
+  word-wrap: break-word;
+
+}
+
+.post-img{
+  background-image: url("/styles/img/burger.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.post-img:hover {
+  opacity: 0.7;
+}
+.subscribe{
+  padding: 0 10px;
+}
+.subscribe-img{
+  background-image: url("/styles/img/subscribe-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.to-the-top h3{
+  line-height: 2.5rem;
+}
+
+input.recipe-form {
+  background-color: #F7F6F2;
+  margin-top: 1.3rem;
+}
+
+button.recipe-form {
+  margin-top: 1.3rem;
+}
+
+.recipes-page-search {
+  text-align: right;
+}
+
+.recipes-page-search input {
+  width: 50%;
+  display: inline-block;
+
+}
+
+.recipes-page-search button {
+  width: 25%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+
+.write-img{
+  background-image: url("/styles/img/write-side-img.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 950px;
+  padding: 30% 0;
+  text-align: center;
+}
+
+.contact-img{
+  background-image: url("/styles/img/contact-img.png");
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  padding: 30% 0;
+  text-align: center;
+}
+
+.write-img-caption {
+  font-size: 2.1rem;
+}
+
+.contact-img-caption {
+  font-size: 3rem;
+}
+
+.this-post-side-section {
+  padding: 2rem;
+  margin: 15px 0;
+  text-align: center;
+  background-color: #212529;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+
+}
+
+.this-post-side-section h3 {
+  color: white;
+}
+
+
+.like-button {
+  color: white;
+  font-size: 6rem;
+  margin: 15px 0;
+}
+
+.like-button:hover {
+  color: #ef8c8c;
+}
+
+.liked {
+  color:  #ef8c8c;
+}
+
+.avatar i {
+  color: #0d6efd;
+  opacity: 0.75;
+  font-size: 7rem;
+}
+
+.comment-date {
+  text-align: right;
+}
+
+.login-img-left {
+  background-image: url("/styles/img/login-left.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.login-img-right {
+  background-image: url("/styles/img/login-right.png");
+  background-position: center;
+  background-size: cover;
+  height: 510px;
+}
+
+
+
+
+
+/* 1630 to 992
+*/
+@media screen and (max-width: 1635px) {
+  .heading i {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1630px){
+  .black-box h3 {
+    font-size: 1.3rem;
+  }
+  .black-box p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px){
+  header{
+    text-align: center;
+  }
+  .heading{
+    text-align: center;
+  }
+  .heading h1, .social-buttons i {
+    font-size: 5rem;
+  }
+.post-img{
+  margin-bottom: 1rem;
+}
+.subscribe-img{
+  margin-bottom: 1rem;
+}
+.social-buttons{
+    text-align: center;
+  }
+
+.recipes-page-search {
+  text-align: center;
+}
+.recipes-page-search form{
+  margin-bottom: 1rem;
+}
+.recipes-page-search-h2{
+  text-align: center;
+}
+.write-img{
+  margin-top: 15px;
+}
+.contact-img{
+  margin-top: 15px;
+}
+}

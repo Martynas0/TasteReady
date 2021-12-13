@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="row ">
+  <div class="col-md-4">
+    <div class="login-img-left">
+
+    </div>
+  </div>
+  <div class="col-md-4 p-5">
+        <h2>Log In</h2>
+    <form action="/login" method="post">
+
+            <label>Username:</label>
+            <input class="form-control" type="text" name="username"/>
+            <br>
+
+            <label>Password:</label>
+            <input class="form-control" type="password" name="password"/>
+            <br>
+
+            <input class="btn btn-primary btn-lg" type="submit" value="Log In"/>
+
+    </form>
+  </div>
+  <div class="col-md-4">
+    <div class="login-img-right">
+
+    </div>
+  </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

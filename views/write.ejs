@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+
+<div class="row">
+  <div class="col-md-7">
+    <h2>Add a new post to your blog.</h2>
+    <p class="write">Publish your mouthwatering recipes...</p>
+    <br>
+    <form class="" action="/addNewPost" method="post" enctype="multipart/form-data">
+      <label class="form-label" for="title">Title</label>
+      <input class="form-control" type="text" name="title">
+      <br>
+      <label class="form-label" for="image">Choose an image</label>
+      <input class="form-control" type="file" accept="image/png, image/jpeg" name="image">
+      <br>
+      <label class="form-label" for="short-desc">Short description</label>
+      <textarea class="form-control" name="shortDesc" rows="2" cols="20"></textarea>
+      <br>
+      <label class="form-label" for="content">Recipe content</label>
+      <textarea class="form-control" name="content" rows="15" cols="80"></textarea>
+      <br>
+      <button class="btn btn-lg btn-primary" type="submit" name="submit">Publish</button>
+    </form>
+  </div>
+  <div class="col-md-5">
+    <div class="write-img">
+      <div class="black-box">
+        <p class="write-img-caption">Share Your Recipes</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

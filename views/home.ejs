@@ -1,0 +1,124 @@
+<%- include("partials/header.ejs") %>
+
+  <!------ PAGE BODY HERE --->
+
+
+
+    <!---- POPULAR RECIPES ------------>
+    <div class="recipes container-fluid text-center">
+      <h2>Popular Recipes </h2>
+      <div class="row">
+
+       <% popularPosts.forEach(function(element){ %>
+
+        <div class="col-md-4">
+          <a href="/posts/<%=element._id %>">
+          <div class="post-img" style="background-image: url(/uploads/<%=element.imageFileName%>)">
+            <div class="black-box">
+              <h3><%= element.title %></h3>
+              <br>
+              <p><%= element.shortDesc %></p>
+            </div>
+          </div>
+          </a>
+        </div>
+
+      <% }); %>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <!----- SUBSCRIBE ----------->
+    <div class="container-fluid subscribe">
+      <div class="subscribe-img ">
+
+       <form class="" action="/subscribe" method="post">
+     <div class="row">
+       <div class="col-md-4 black-box">
+         <h3 class="recipe-form">Subscribe to our Newsletter</h3>
+         <p class="recipe-form">So you never miss a new recipe again.</p>
+       </div>
+       <div class="col-md-3">
+         <input type="text" name="name" class="form-control recipe-form" id="name" placeholder="Your name...">
+       </div>
+       <div class="col-md-3">
+         <input type="email" name="email" class="form-control recipe-form" id="email" placeholder="Your email address here...">
+       </div>
+       <div class="col-md-2">
+         <button class="btn btn-primary form-control recipe-form" id="button-submit" type="submit" name="button">Subscribe</button>
+       </div>
+     </div>
+     </form>
+
+
+      </div>
+    </div>
+    <hr>
+
+    <!----- NEW POSTS ------------->
+
+    <div class="recipes container-fluid text-center">
+      <h2>New Recipes </h2>
+      <div class="row">
+
+    <%    recentPosts.forEach(function(element){ %>
+        <div class="col-md-4">
+          <a href="/posts/<%= element._id %>">
+          <div class="post-img" style="background-image: url(/uploads/<%= element.imageFileName %>)">
+            <div class="black-box">
+              <h3><%= element.title %></h3>
+              <br>
+              <p><%= element.shortDesc %></p>
+            </div>
+          </div>
+          </a>
+        </div>
+    <%   }) %>
+
+      </div>
+
+    </div>
+    <hr>
+    <!------ SEARCH & BACK TO TOP ----------->
+
+    <div class="contaner-fluid subscribe">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="subscribe-img">
+            <form action="/posts/search" method="post">
+            <div class="row">
+              <div class="col-md-5 black-box">
+                <h3 class="recipe-form">What are you looking for?</h3>
+                <p class="recipe-form">Find a recipe for your taste.</p>
+              </div>
+              <div class="col-md-4">
+                  <input class="form-control recipe-form" type="text" name="searchQuery" placeholder="Search...">
+              </div>
+              <div class="col-md-3">
+                 <button class="form-control btn btn-primary recipe-form" type="submit" name="button">Find Recipes</button>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a class="to-the-top" href="#top">
+          <div class="subscribe-img black-box text-center">
+
+                <h3 class="recipe-form">Click here to go back to top. <i class="fas fa-arrow-up"></i></h3>
+
+          </div>
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  <!------ ////PAGE BODY HERE --->
+
+<%- include("partials/footer.ejs") %>
